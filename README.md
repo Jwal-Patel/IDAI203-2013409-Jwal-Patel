@@ -70,3 +70,32 @@ elif class in ["paper","cardboard","plastic","metal","glass","clothes","shoes"]:
     bin = "Blue Bin (Recyclable)"
 elif class in ["battery","trash"]:
     bin = "Red Bin (Hazardous)"
+
+
+## 🌐 Streamlit App
+ - The app (app.py) allows users to:
+
+ - Upload an image.
+
+ - View uploaded image preview.
+
+ - See predicted waste type + confidence %.
+
+ - Get the recommended bin color.
+
+ - Example Output:
+Waste Type: Plastic
+
+Confidence: 92.5%
+
+Recommended Bin: Blue Bin (Recyclable)
+
+ ## 📸 Screenshots:
+<img width="967" height="1344" alt="image" src="https://github.com/user-attachments/assets/f4d0823d-2a91-4add-83da-617ed9822207" />
+<img width="902" height="1352" alt="image" src="https://github.com/user-attachments/assets/466996c0-6623-44e4-b7da-9209e1203b2d" />
+<img width="937" height="1357" alt="image" src="https://github.com/user-attachments/assets/0accf960-44f9-4c7f-93c9-e87f7bc75c22" />
+<img width="939" height="1345" alt="image" src="https://github.com/user-attachments/assets/f1220ca0-73b1-4a7f-a386-e12c84c6f314" />
+<img width="894" height="1304" alt="image" src="https://github.com/user-attachments/assets/5739d515-dc29-464d-a7ea-c825f405e61f" />
+
+#Live Demo (Published APP Link):
+https://idai203-2013409-jwal-patel-wasteclassificationsystem.streamlit.app/
