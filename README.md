@@ -33,3 +33,40 @@ This project helps reduce landfill waste, improves recycling rates, and supports
 ### 🗂️ Dataset  
 The dataset used contains **10 classes** of waste items:  
 
+
+- Each class has ~100+ images.  
+- Images resized to **224x224 px**.  
+- Data preprocessing included **augmentation** (rotation, flipping, brightness, zoom).  
+- Dataset split: **70% Training, 15% Validation, 15% Testing**.  
+
+---
+
+## 🛠️ Tech Stack  
+- **Python 3.9+**  
+- **TensorFlow / Keras** (MobileNetV2 transfer learning)  
+- **OpenCV** (image preprocessing)  
+- **Streamlit** (web app & deployment)  
+- **NumPy, Matplotlib, scikit-learn** (metrics & visualization)  
+
+---
+
+## 🧑‍💻 Model Development  
+- Base Model: **MobileNetV2** (pretrained on ImageNet).  
+- Fine-tuned for **10 waste categories**.  
+- Optimizer: `Adam (lr=0.0001)`  
+- Loss: `categorical_crossentropy`  
+- Metrics: `accuracy`, `confusion matrix`.  
+
+Final model: `waste_model.h5`  
+Class index mapping: `class_indices.json`  
+
+---
+
+## 🔄 Bin Recommendation Logic  
+```python
+if class in ["biological"]:
+    bin = "Green Bin (Biodegradable)"
+elif class in ["paper","cardboard","plastic","metal","glass","clothes","shoes"]:
+    bin = "Blue Bin (Recyclable)"
+elif class in ["battery","trash"]:
+    bin = "Red Bin (Hazardous)"
