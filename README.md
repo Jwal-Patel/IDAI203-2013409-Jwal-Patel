@@ -41,7 +41,7 @@ The dataset used contains **10 classes** of waste items:
 
 ---
 
-## 🛠️ Tech Stack  
+### 🛠️ Tech Stack  
 - **Python 3.9+**  
 - **TensorFlow / Keras** (MobileNetV2 transfer learning)  
 - **OpenCV** (image preprocessing)  
@@ -50,7 +50,7 @@ The dataset used contains **10 classes** of waste items:
 
 ---
 
-## 🧑‍💻 Model Development  
+### 🧑‍💻 Model Development  
 - Base Model: **MobileNetV2** (pretrained on ImageNet).  
 - Fine-tuned for **10 waste categories**.  
 - Optimizer: `Adam (lr=0.0001)`  
@@ -61,16 +61,6 @@ Final model: `waste_model.h5`
 Class index mapping: `class_indices.json`  
 
 ---
-
-## 🔄 Bin Recommendation Logic  
-```python
-if class in ["biological"]:
-    bin = "Green Bin (Biodegradable)"
-elif class in ["paper","cardboard","plastic","metal","glass","clothes","shoes"]:
-    bin = "Blue Bin (Recyclable)"
-elif class in ["battery","trash"]:
-    bin = "Red Bin (Hazardous)"
-
 
 ## 🌐 Streamlit App
  - The app (app.py) allows users to:
@@ -88,6 +78,8 @@ Waste Type: Plastic
 
 Confidence: 92.5%
 
+---
+
 Recommended Bin: Blue Bin (Recyclable)
 
  ## 📸 Screenshots:
@@ -99,3 +91,15 @@ Recommended Bin: Blue Bin (Recyclable)
 
 #Live Demo (Published APP Link):
 https://idai203-2013409-jwal-patel-wasteclassificationsystem.streamlit.app/
+
+
+---
+
+### 🔄 Bin Recommendation Logic  
+```python
+if class in ["biological"]:
+    bin = "Green Bin (Biodegradable)"
+elif class in ["paper","cardboard","plastic","metal","glass","clothes","shoes"]:
+    bin = "Blue Bin (Recyclable)"
+elif class in ["battery","trash"]:
+    bin = "Red Bin (Hazardous)"
