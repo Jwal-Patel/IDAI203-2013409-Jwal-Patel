@@ -43,7 +43,7 @@ uploaded_file = st.file_uploader("Upload Image", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
     img = image.load_img(uploaded_file)
-    st.image(img, caption="Uploaded Image", use_column_width=True)
+    st.image(img, caption="Uploaded Image", use_container_width=True)
 
     # Prediction
     img_array = preprocess_image(img)
@@ -60,3 +60,4 @@ if uploaded_file is not None:
     st.write(f"**Waste Type:** {predicted_class}")
     st.write(f"**Confidence:** {confidence:.2f}%")
     st.write(f"**Recommended Bin:** 🗑️ {bin_rec}")
+
