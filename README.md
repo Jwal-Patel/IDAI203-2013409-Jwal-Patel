@@ -5,6 +5,8 @@ This project is a **Deep Learning–based Smart Waste Classification System** th
 
 It aims to automate the process of waste classification by identifying different types of waste such as **cardboard, glass, metal, paper, plastic, and trash** using a trained MobileNetV2-based classifier.
 
+Live Demo: https://share.streamlit.io/-/auth/app?redirect_uri=https%3A%2F%2Fiadai201-2013409-jwalpatel-waste-management.streamlit.app%2F
+
 ---
 
 ## ⚙️ Technology Stack
